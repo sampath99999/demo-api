@@ -2,7 +2,9 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 var bodyParser = require("body-parser");
+var cors = require("cors");
 
+app.use(cors());
 dotenv.config();
 app.listen(process.env.PORT || 3000, function (err) {
     if (err) throw err;
